@@ -168,6 +168,7 @@ function UserTickets() {
                                   <button
                                     onClick={() =>
                                       handleOpenQR("md", reservation._id)
+                                      
                                     }
                                     className="border font-bold p-2 text-[12px] rounded-full"
                                   >

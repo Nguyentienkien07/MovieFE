@@ -131,7 +131,8 @@ const DetailMovieSoon = () => {
                           <span className="text-gray-300">
                             {content === ""
                               ? "Thể loại"
-                              : content.movieDetail.type} :{" "}
+                              : content.movieDetail.type}{" "}
+                            :{" "}
                           </span>
                           {movieSoon.type}
                         </p>

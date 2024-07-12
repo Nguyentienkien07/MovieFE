@@ -429,7 +429,13 @@ function Booking() {
                                     <span className="text-gray-500">
                                       Tổng:{" "}
                                     </span>
-                                    {vlPriceFood + vlPriceTicket}VNĐ
+                                    {/* {vlPriceFood + vlPriceTicket}VNĐ */}
+                                    {(
+                                      vlPriceFood + vlPriceTicket
+                                    ).toLocaleString("vi", {
+                                      style: "currency",
+                                      currency: "VND",
+                                    })}
                                   </p>
                                   <p className="text-[10px] text-gray-200">
                                     &#40; Nếu bạn không muốn lên nóc nhà ngồi.

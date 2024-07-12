@@ -63,15 +63,10 @@ function Cinema() {
               <div className="lg:m-[40px] 2xl:m-[60px] m-[20px] max-h-full">
                 <Breadcrumbs className="bg-transparen p-0">
                   <Link to="/home" className="text-gray-400">
-                  {content === ""
-                      ? "Trang chủ"
-                      : content.booking.linkHome
-                  }
+                    {content === "" ? "Trang chủ" : content.booking.linkHome}
                   </Link>
                   <Link to="/cinema" className="text-gray-200">
-                  {content === ""
-                      ? "Rạp chiếu phim"
-                      : content.navbar.nav3}
+                    {content === "" ? "Rạp chiếu phim" : content.navbar.nav3}
                   </Link>
                 </Breadcrumbs>
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-10 lg:gap-x-5 ">
@@ -81,16 +76,18 @@ function Cinema() {
                       className="text-white uppercase text-sm lg:text-[16px] pr-6 py-[15px]  border-b-[3px] border-[#E50914]"
                     >
                       {content === ""
-                      ? "hệ thống rạp chiếu"
-                      : content.cinema.title}
+                        ? "hệ thống rạp chiếu"
+                        : content.cinema.title}
                     </button>
                     <div className="mt-10">
                       <div className="mb-2">
                         <Select
                           className="text-white"
-                          label= {content === ""
-                          ? "CHỌN RẠP CHIẾU"
-                          : content.booking.selectCinema}
+                          label={
+                            content === ""
+                              ? "CHỌN RẠP CHIẾU"
+                              : content.booking.selectCinema
+                          }
                           onChange={handleChangeCinema}
                           animate={{
                             mount: { y: 0 },
@@ -171,22 +168,22 @@ function Cinema() {
                       disabled
                       className="text-white uppercase text-sm lg:text-[16px] pr-6 py-[15px] my-3  border-b-[3px] border-[#E50914]"
                     >
-                       {content === ""
-                      ? "Một số hình ảnh"
-                      : content.cinema.image}
+                      {content === ""
+                        ? "Một số hình ảnh"
+                        : content.cinema.image}
                     </button>
                     <div>
                       <Carousel>
                         <img
-                          src="https://cdn.galaxycine.vn/media/2019/12/27/79838883-139480674153736-6337298685621174272-o_1577418516231.jpg"
+                          src="https://iguov8nhvyobj.vcdn.cloud/media/site/cache/3/980x415/b58515f018eb873dafa430b6f9ae0c1e/v/i/vin-dn-3_8.png"
                           alt=""
                         ></img>
                         <img
-                          src="https://cdn.galaxycine.vn/media/2019/12/27/79844929-139480880820382-5735358774273638400-o_1577418596248.jpg"
+                          src="https://iguov8nhvyobj.vcdn.cloud/media/site/cache/3/980x415/b58515f018eb873dafa430b6f9ae0c1e/v/i/vin-dn-1_8.png"
                           alt=""
                         ></img>
                         <img
-                          src="https://cdn.galaxycine.vn/media/2019/12/27/80077318-139480644153739-5771371117272891392-o_1577418600896.jpg"
+                          src="https://iguov8nhvyobj.vcdn.cloud/media/site/cache/3/980x415/b58515f018eb873dafa430b6f9ae0c1e/v/i/vin-dn-2_8.png"
                           alt=""
                         ></img>
                       </Carousel>
@@ -198,9 +195,7 @@ function Cinema() {
                         disabled
                         className="text-white uppercase text-sm lg:text-[16px] pr-6 py-[15px]  border-b-[3px] border-[#E50914]"
                       >
-                         {content === ""
-                      ? "giá vé"
-                      : content.cinema.price}
+                        {content === "" ? "giá vé" : content.cinema.price}
                       </button>
                       <img
                         src="https://cdn.galaxycine.vn/media/2024/1/18/ca-mau-100_1674015086453.jpg"
@@ -213,16 +208,16 @@ function Cinema() {
                       disabled
                       className="text-white uppercase text-sm lg:text-[16px] pr-6 py-[15px] mt-5  border-b-[3px] border-[#E50914]"
                     >
-                       {content === ""
-                      ? "thông tin chi tiết"
-                      : content.cinema.title}
+                      {content === ""
+                        ? "thông tin chi tiết"
+                        : content.cinema.title}
                     </button>
                     <div className="py-5 text-sm">
                       <p className="text-gray-500">
                         Địa chỉ:{" "}
                         <span className="text-white">
-                          Lầu 2, TTTM Sense City, số 9, Trần Hưng Đạo, P.5, tp.
-                          Tương lai
+                          Tầng 4, TTTM Vincom Đà Nẵng, đường Ngô Quyền, P.An Hải
+                          Bắc, Q.Sơn Trà, TP. Đà Nẵng
                         </span>
                       </p>
                       <p className="text-gray-500">
@@ -230,12 +225,15 @@ function Cinema() {
                         <span className="text-white">099999233</span>
                       </p>
                       <p className="text-gray-300 text-justify">
-                        Galaxy Cà Mau tọa lạc tại lầu 2 TTTM Sense City, số 9,
-                        Trần Hưng Đạo – rạp chiếu phim được xây dựng theo tiêu
-                        chuẩn quốc tế gồm 6 phòng chiếu 2D&3D, âm thanh Dobly
-                        7.1. Thiết kế trẻ trung, dịch vụ thân thiện, cập nhật
-                        liên tục những bộ phim mới nhất phim hay nhất trong nước
-                        cũng như quốc tế và mức giá vô cùng “hạt dẻ”.
+                        Xem Lịch chiếu và Mua vé CGV Vincom Đà Nẵng- rạp CGV
+                        toàn quốc dễ dàng - nhanh chóng tại Moveek. Rạp CGV
+                        Vincom Đà Nẵng nằm ở Vincom Đà Nẵng, được xây dựng với
+                        tiêu chuẩn rạp Hollywood, chuẩn âm thanh Dolby 7.1, màn
+                        hình lớn, sắc nét. CGV Vincom Đà Nẵng là rạp chiếu phim
+                        thứ 2 của CGV cinema tại thành phố được bình chọn là
+                        đáng sống nhất Việt Nam nhiều năm qua. Cùng với nhiều
+                        rạp chiếu khác, CGV Vincom Đà Nẵng đã đem đến nhiều lựa
+                        chọn giải trí cho các khán giả.
                       </p>
                     </div>
                   </div>

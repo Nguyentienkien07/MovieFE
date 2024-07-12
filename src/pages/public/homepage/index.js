@@ -40,7 +40,7 @@ function HomePage() {
         rating: "8.5/10",
         discription:
           "Chiến Binh Cuối Cùng là phần tiếp theo về Robot biến hình ăn khách. 'Chiến Binh Cuối Cùng' phá nát những huyền thoại cốt lõi của loạt phim Transformers, và tái định nghĩa thế nào là anh hùng. Con người và các Transformer đang có chiến tranh, Optimus Prime đã biến mất. Chìa khóa để cứu tương lai của chúng ta đang được chôn vùi trong những bí mật của quá khứ, trong lịch sử ẩn còn được giữ kín của các Transformer trên Trái Đất.",
-        btn: "COMING SOON",
+        btn: "PHIM SẮP CHIẾU",
       },
     },
     {
@@ -202,11 +202,11 @@ function HomePage() {
                 </div>
                 <div className="py-[5px] text-white">
                   <p className="w-[120px] brightness-200 h-10 bg-[url('https://www.galaxycine.vn/website/images/ic_hotnews.png')]"></p>
-                  <Link to="/movie-now/63b93dfd1d4172de899ce6ca">
+                  {/* <Link to="/movie-now/63b93dfd1d4172de899ce6ca">
                     <p className="text-zinc-400 text-[12px] lg:text-[17px]">
                       Avatar: The Way Of Water
                     </p>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               {/* RENDER PHIM ĐANG CHIẾU OR PHIM SẮP CHIẾU */}
@@ -219,15 +219,12 @@ function HomePage() {
                   {content === "" ? "review phim" : content.title.blogfilm}
                 </button>
                 <div className="grid lg:grid-cols-2 grid-cols-1 py-10 gap-4">
-                  {blogs.map((blog, index) => (
-                    index < 6 &&
-                    <Blogs key={blog._id} blog={blog} />
-                  ))}
+                  {blogs.map(
+                    (blog, index) =>
+                      index < 6 && <Blogs key={blog._id} blog={blog} />
+                  )}
                 </div>
-                <div
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                >
+                <div data-aos="fade-up" data-aos-duration="1500">
                   <div className="flex justify-center mt-5">
                     <button className="py-1 text-[14px] px-2 text-white bg-[#ce0000]">
                       <Link to="/blog&event">
@@ -260,11 +257,11 @@ function HomePage() {
                   ))}
                 </div>
                 <div>
-                  <div className="flex justify-center mt-5">
+                  <div className="flex justify-center mt-5 pb-5">
                     <button className="py-1 text-[14px] px-2 text-white bg-[#ce0000]">
                       <Link to="/blog&event">
                         <div className="buttons">
-                          <button className="btn">
+                          <button className="btn ">
                             <span></span>
                             <p
                               data-start="good luck!"
@@ -277,53 +274,6 @@ function HomePage() {
                     </button>
                   </div>
                 </div>
-              </div>
-
-              {/* về chúng tôi */}
-              <div className="py-5">
-                <button className="text-white py-[17px]  text-[15px] border-b-[3px] mb-10 border-[#E50914]">
-                  NetFlix
-                </button>
-                <p className="text-gray-400 text-sm lg:text-[15px] text-justify">
-                  &ensp;NetFlix là một trong những công ty một mình tao đầu
-                  tiên về điện ảnh được thành lập từ năm 2003, đã khẳng định
-                  thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được yêu
-                  thích nhất. Ngoài hệ thống rạp chiếu phim hiện đại, thu hút
-                  hàng triệu lượt người đến xem, NetFlix còn hấp dẫn khán giả
-                  bởi không khí thân thiện cũng như chất lượng dịch vụ hàng đầu.
-                  Đến website galaxycine.vn, khách hàng sẽ dễ dàng tham khảo các
-                  phim hay nhất, phim mới nhất đang chiếu hoặc sắp chiếu luôn
-                  được cập nhật thường xuyên. Lịch chiếu tại tất cả hệ thống rạp
-                  chiếu phim của NetFlix cũng được cập nhật đầy đủ hàng ngày
-                  hàng giờ trên trang chủ.
-                  <br></br>
-                  &ensp;Từ vũ trụ điện ảnh Marvel, người hâm mộ sẽ có cuộc tái
-                  ngộ với Người Nhện qua Spider-Man: No Way Home hoặc Doctor
-                  Strange 2. Ngoài ra 007: No Time To Die, Turning Red, Minions:
-                  The Rise Of Gru..., là những tác phẩm hứa hẹn sẽ gây bùng nổ
-                  phòng vé trong thời gian tới. Giờ đây đặt vé tại NetFlix
-                  càng thêm dễ dàng chỉ với vài thao tác vô cùng đơn giản. Để
-                  mua vé, hãy vào tab Mua vé. Quý khách có thể chọn Mua vé theo
-                  phim, theo rạp, hoặc theo ngày. Sau đó, tiến hành mua vé theo
-                  các bước hướng dẫn. Chỉ trong vài phút, quý khách sẽ nhận được
-                  tin nhắn và email phản hồi Đặt vé thành công của NetFlix.
-                  Quý khách có thể dùng tin nhắn lấy vé tại quầy vé của React
-                  Flix hoặc quét mã QR để một bước vào rạp mà không cần tốn thêm
-                  bất kỳ công đoạn nào nữa.<br></br>&ensp; Nếu bạn đã chọn được
-                  phim hay để xem, hãy đặt vé cực nhanh bằng box Mua Vé Nhanh
-                  ngay từ Trang Chủ. Chỉ cần một phút, tin nhắn và email phản
-                  hồi của Galaxy Cinema sẽ gửi ngay vào điện thoại và hộp mail
-                  của bạn. Nếu chưa quyết định sẽ xem phim mới nào, hãy tham
-                  khảo các bộ phim hay trong mục Phim Đang Chiếu cũng như Phim
-                  Sắp Chiếu tại rạp chiếu phim bằng cách vào mục Bình Luận Phim
-                  ở Góc Điện Ảnh để đọc những bài bình luận chân thật nhất, tham
-                  khảo và cân nhắc. Sau đó, chỉ việc đặt vé bằng box Mua Vé
-                  Nhanh ngay ở đầu trang để chọn được suất chiếu và chỗ ngồi vừa
-                  ý nhất. NetFlix luôn có những chương trình khuyến mãi, ưu
-                  đãi, quà tặng vô cùng hấp dẫn như giảm giá vé, tặng vé xem
-                  phim miễn phí, tặng Combo, tặng quà phim… dành cho các khách
-                  hàng.
-                </p>
               </div>
             </div>
           </div>

@@ -25,10 +25,12 @@ const DetailMovie = () => {
   const [content, setContent] = useState("");
   const language = useSelector((state) => state.language.language);
   const [loadingPage, setLoadingPage] = useState(false);
+
   const handleOpen = useCallback((value, embed) => {
     setSize(value);
     setVlYoutube(embed);
   }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setLoadingPage(true);
@@ -38,6 +40,7 @@ const DetailMovie = () => {
       setLoadingPage(false);
     }, 1300);
   }, [movieId.id]);
+
   useEffect(() => {
     if (language === "English") {
       setContent(Data.english);
@@ -116,7 +119,7 @@ const DetailMovie = () => {
                             {content === ""
                               ? "Quốc gia"
                               : content.movieDetail.country}{" "}
-                            : {" "}
+                            :{" "}
                           </span>
                           {movie.country}
                         </p>
@@ -133,8 +136,8 @@ const DetailMovie = () => {
                           <span className="text-gray-300">
                             {content === ""
                               ? "Thể loại"
-                              : content.movieDetail.type} :{" "}
-                            
+                              : content.movieDetail.type}{" "}
+                            :{" "}
                           </span>
                           {movie.type}
                         </p>

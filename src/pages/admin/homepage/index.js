@@ -24,9 +24,9 @@ function Dashboard() {
   let [countTotal, setCountTotal] = useState(0);
   const reservations = useSelector((state) => state.reservations.reservations);
   const data = [
-    { name: "Tháng 1", Total: 0, User: 0 },
-    { name: "Tháng 2", Total: 100, User: 1000 },
-    { name: "Tháng 3", Total: countTotal, User: users.length },
+    { name: "Tháng 4", Total: 0, User: 0 },
+    { name: "Tháng 5", Total: 100, User: 1000 },
+    { name: "Tháng 6", Total: countTotal, User: users.length },
   ];
   // const user = [
   //     { name: "Tháng 1", Total: 0 },
@@ -90,7 +90,7 @@ function Dashboard() {
               </div>
             </div>
             <div className="p-3 border-none shadow-xl rounded-xl">
-              <h1>DOANH THU TRONG THÁNG 3</h1>
+              <h1>DOANH THU TRONG THÁNG 6</h1>
               <p className="text-[35px] py-4 font-bold">
                 {countTotal.toLocaleString("vi", {
                   style: "currency",
@@ -108,7 +108,7 @@ function Dashboard() {
           <div className="grid grid-cols-10 mt-10 gap-3">
             <div className="p-3 flex flex-col items-center col-span-3 text-center rounded-xl shadow-xl">
               <h1 className="font-medium text-[18px]">
-                TỔNG DOANH THU QUÝ 1 NĂM 2024
+                TỔNG DOANH THU QUÝ 2 NĂM 2024
               </h1>
               <p className="text-sm">&#40; Đơn vị tính: Nghìn đồng &#41;</p>
               <div className="p-5" style={{ width: 200, height: 200 }}>
